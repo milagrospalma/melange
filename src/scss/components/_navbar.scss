@@ -1,18 +1,16 @@
 .navbar {
-    color: #000;
-    background-color: rgb(235, 235, 235);
+    color: $black;
+    background-color: $white;
     width: 100%;
     height: 64px;
     line-height: 64px;
-    box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%);
+    // box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%);
     padding: 0 30px;
     box-sizing: border-box;
-
-    a {
-        text-decoration: none;
-        color: #000;
-        font-size: 1rem;
-        padding: 0 15px;
+    @include minw($mq-md) {
+        min-height: 95px;
+        max-width: 1120px;
+        margin: 30px auto 0;
     }
 
     .navbar-content {
@@ -25,12 +23,15 @@
             flex-direction: row-reverse;
             justify-content: flex-end;
         }
+        @include minw($mq-md) {
+            align-items: center;
+        }
     }
 
     .navbar-brand {
         font-size: 2.1rem;
         padding: 0;
-        color: #000;
+        color: $black;
         display: inline-block;
         margin-right: 1em;
     }
@@ -45,6 +46,9 @@
             list-style-type: none;
             float: left;
             padding: 0;
+            a {
+                padding: 0 15px;
+            }
         }
     }
 

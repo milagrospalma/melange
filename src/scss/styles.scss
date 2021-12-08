@@ -1,8 +1,9 @@
 // Materialize
-@import 'node_modules/materialize-css/sass/materialize';
+@import "node_modules/materialize-css/sass/materialize";
 
 // Mixin
 @import "mixin/general";
 
 // Local styles
-@import 'navbar';
+@import "base/general";
+@import "components/general";
