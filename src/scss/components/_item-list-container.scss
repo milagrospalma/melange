@@ -1,0 +1,10 @@
+.item-list-container {
+    background-color: $white;
+    padding: 50px;
+    width: 95%;
+    margin: 10px auto 0;
+    .text {
+        color: $gray;
+        font-size: 18px;
+    }
+}

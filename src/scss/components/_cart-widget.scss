@@ -1,0 +1,14 @@
+.cart {
+    cursor: pointer;
+    display: flex;
+    padding: 10px;
+    transition: all .3s ease;
+    &:hover {
+        svg {
+            path {
+                fill: #af824c;
+                transition: all .5s ease;
+            }
+        }
+    }
+}
