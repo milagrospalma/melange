@@ -3,6 +3,10 @@
     display: flex;
     padding: 10px;
     transition: all .3s ease;
+    @include maxw($mq-md) {
+        order: 3;
+        align-items: center;
+    }
     &:hover {
         svg {
             path {

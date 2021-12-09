@@ -1,8 +1,11 @@
 .item-list-container {
     background-color: $white;
-    padding: 50px;
+    padding: 10px;
     width: 95%;
     margin: 10px auto 0;
+    @include minw($mq-md) {
+        padding: 50px;
+    }
     .text {
         color: $gray;
         font-size: 18px;
