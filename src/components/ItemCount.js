@@ -1,21 +1,12 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-function ItemCount({stock, initial}) {
-    let [state, setState] = useState({ quantity: 1 });
-
-    const onAdd = () => {
-        setState({quantity: ++state.quantity});
-    }
-
-    const onRemove = () => {
-        setState({quantity: --state.quantity});
-    }
+function ItemCount({stock, initial, onAdd, onRemove}) {
 
     return (
         <div className="item-count">
-            <button onClick={state.quantity > initial ? onRemove : null} className={`btn-control ${state.quantity <= initial ? 'disabled' : ''}`}>-</button>
-            <span>{state.quantity}</span>
-            <button onClick={state.quantity < stock ? onAdd : null} className={`btn-control ${state.quantity >= stock ? 'disabled' : ''}`}>+</button>
+            <button onClick={() => onRemove(initial)} className={`btn-control ${initial === 1 ? 'disabled' : ''}`}>-</button>
+            <span>{initial}</span>
+            <button onClick={() => onAdd(stock, initial)} className={`btn-control ${initial >= stock ? 'disabled' : ''}`}>+</button>
         </div>
     )
 }
