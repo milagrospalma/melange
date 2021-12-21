@@ -31,7 +31,7 @@ function ItemDetailContainer() {
     }, []);
 
     return (
-        <div>
+        <div className="item-detail-container">
             <ItemDetail item={state} />
         </div>
     )
