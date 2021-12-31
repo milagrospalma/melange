@@ -1,68 +1,72 @@
-.navbar {
-    color: $black;
-    background-color: $white;
-    width: 100%;
-    height: 64px;
-    line-height: 64px;
-    padding: 0 15px;
-    box-sizing: border-box;
-    @include minw($mq-md) {
-        min-height: 95px;
-        max-width: 1120px;
-        margin: 30px auto 0;
-        padding: 0 30px;
-    }
-
-    .navbar-content {
-        position: relative;
-        height: 100%;
-        display: flex;
-        justify-content: space-between;
-        @include minw($mq-md) {
-            align-items: center;
-        }
-    }
-
-    .navbar-brand {
-        font-size: 2.1rem;
-        padding: 0;
-        color: $black;
-        display: inline-block;
-        margin-right: 1em;
-        @include maxw($mq-md) {
-            order: 2;
-            margin-right: 0;
-        }
-    }
-
-    .navbar-menu {
-        padding-left: 0;
-        list-style-type: none;
-        float: right !important;
-        margin: 0;
-        flex: 1 1 0%;
+#navbar {
+    ul {
         li {
-            list-style-type: none;
-            float: left;
-            padding: 0;
+            @include minw($mq-md) {
+                margin: 0 10px;
+            }
             a {
-                padding: 0 15px;
-                transition: all .3s ease;
-                text-transform: uppercase;
+                color: $black;
+                font-family: $ff-Jost-SemiBold;
                 font-size: 14px;
+                transition: all .3s ease-out;
+                @include minw($mq-md) {
+                    display: inline;
+                    padding: 5px;
+                }
+
+                &.current {
+                    color: #77c4be;
+                }
                 &:hover {
                     background-color: transparent;
-                    color: #af824c !important;
-                    transition: all .3s ease;
+                    color: #77c4be;
+                    transition: all .3s ease-in;
                 }
             }
         }
     }
+    nav {
+        background-color: $white;
+        .nav-wrapper {
+            @include maxw($mq-md) {
+                display: flex;
+                justify-content: space-between;
+                flex-direction: row-reverse;
+                align-items: center;
+                height: 60px;
+            }
+            @include minw($mq-md) {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            #nav-mobile {
+                @include minw($mq-md) {
+                    margin-left: 80px;
+                    order: 2;
+                }
+            }
+        }
+        .brand-logo {
+            width: 55px;
+            display: inline-flex;
 
-    .navbar-menu-mob {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-right: 20px;
+            @include minw($mq-md) {
+                order: 1;
+            }
+            >img {
+                width: 100%;
+            }
+        }
+        .sidenav-trigger {
+            @include maxw($mq-md) {
+                display: inline-flex;
+                height: fit-content;
+                margin: 0;
+            }
+        }
+    }
+    .sidenav {
+        padding: 30px 0;
     }
 }

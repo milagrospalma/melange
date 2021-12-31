@@ -1,18 +1,16 @@
 .cart {
-    cursor: pointer;
-    display: flex;
-    padding: 10px;
-    transition: all .3s ease;
+    left: auto;
+    right: 0;
+    float: right;
+    width: 35px;
+    display: inline-flex;
     @include maxw($mq-md) {
-        order: 3;
-        align-items: center;
+        margin: 0;
     }
-    &:hover {
-        svg {
-            path {
-                fill: #af824c;
-                transition: all .5s ease;
-            }
-        }
+    @include minw($mq-md) {
+        order: 3;
+    }
+    >img {
+        width: 100%;
     }
 }

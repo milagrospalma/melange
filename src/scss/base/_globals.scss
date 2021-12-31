@@ -7,3 +7,9 @@ a {
     color: #000;
     font-size: 16px;
 }
+
+.container {
+    @include minw($mq-md) {
+        width: 85%;
+    }
+}
