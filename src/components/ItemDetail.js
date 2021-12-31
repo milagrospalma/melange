@@ -3,7 +3,7 @@ import ItemCount from './ItemCount'
 
 function ItemDetail({item}) {
     return (
-        <div className="item-detail">
+        <div className="item-detail hide">
             <div className="content-img">
                 <img src={item.pictureUrl} alt={item.title} />
             </div>

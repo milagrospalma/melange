@@ -1,1 +1,9 @@
-// Fonts
+// Jost
+@include font-face("Jost-Medium", $font-path + "jost/JostMedium", eot svg ttf woff woff2);
+@include font-face("Jost-SemiBold", $font-path + "jost/JostSemiBold", eot svg ttf woff woff2);
+
+// Quicksand
+@include font-face("Quicksand-Medium", $font-path + "quicksand/QuicksandMedium", eot svg ttf woff woff2);
+@include font-face("Quicksand-Regular", $font-path + "quicksand/QuicksandRegular", eot svg ttf woff woff2);
+@include font-face("Quicksand-Bold", $font-path + "quicksand/QuicksandBold", eot svg ttf woff woff2);
+

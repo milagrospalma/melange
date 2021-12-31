@@ -1,0 +1,38 @@
+footer {
+    background-color: #e9f6f6; //#F4F8FB;
+    padding: 20px 0 30px;
+    @include minw($mq-md) {
+        padding: 50px 0 60px;
+    }
+    .title {
+        font-family: $ff-Jost-Medium;
+        font-size: 16px;
+        line-height: 1;
+        margin-bottom: 20px;
+    }
+    ul {
+        margin: 0;
+        li {
+            margin: 15px 0;
+            >a {
+                color: #727272;
+                font-family: $ff-Quicksand-Medium;
+                font-size: 14px;
+                line-height: 1;
+            }
+        }
+    }
+    .list-social {
+        display: flex;
+        >li {
+            margin: 0;
+            width: 50px;
+            height: 50px;
+        }
+    }
+    .btn-social-media {
+        img {
+            width: 50%;
+        }
+    }
+}

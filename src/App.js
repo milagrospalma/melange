@@ -1,5 +1,6 @@
 import React from 'react';
-import NavBar from './components/NavBar';
+import NavBar from './components/Navbar/NavBar';
+import Footer from './components/Footer/Footer';
 import ItemListContainer from './components/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer';
 
@@ -9,6 +10,7 @@ function App() {
       <NavBar />
       <ItemListContainer gretting='Productos Nuevos' />
       <ItemDetailContainer/>
+      <Footer/>
     </div>
   );
 }
