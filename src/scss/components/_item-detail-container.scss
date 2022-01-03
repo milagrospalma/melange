@@ -1,4 +1,7 @@
 .item-detail-container {
-    width: 1100px;
     margin: 0 auto;
+    @include minw($mq-md) {
+        // width: 1100px;
+
+    }
 }

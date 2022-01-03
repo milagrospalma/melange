@@ -1,20 +1,52 @@
 .item-detail {
-    padding: 40px;
+    padding: 25px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-    margin-bottom: 50px;
+    @include minw($mq-md) {
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 50px;
+        padding: 40px;
+    }
 
     .content-img {
-        width: 400px;
         margin: 0 auto;
+        @include minw($mq-md) {
+            width: 400px;
+
+        }
         >img {
             width: 100%;
         }
     }
     .content-detail {
-        padding: 30px;
+        @include minw($mq-md) {
+            padding: 30px;
+        }
+        .product {
+            &--category {
+
+            }
+            &--name {
+                font-family: $ff-Jost-SemiBold;
+                font-size: 22px;
+                line-height: 1.2;
+                @include minw($mq-md) {
+                    font-size: 30px;
+                }
+            }
+            &--description {
+                font-family: $ff-Quicksand-Regular;
+                font-size: 14px;
+                line-height: 1.3;
+                @include minw($mq-md) {
+                    font-size: 16px;
+                }
+            }
+            &--size {
+
+            }
+        }
     }
 
     .btn-add-to-cart {

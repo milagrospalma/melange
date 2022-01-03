@@ -1,0 +1,27 @@
+.category-list-container {
+    padding: 60px 0;
+    .row {
+        margin: 0;
+    }
+    .category-card {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin: 0 auto;
+        .detail {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 0;
+            .name {
+                font-family: $ff-Quicksand-Bold;
+                font-size: 15px;
+                line-height: 1.2;
+                margin: 0 10px 0 0;
+                @include minw($mq-md) {
+                    font-size: 21px;
+                }
+            }
+        }
+    }
+}

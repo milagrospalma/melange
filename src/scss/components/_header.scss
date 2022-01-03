@@ -1,0 +1,29 @@
+.header {
+    background-image: url($imgs+'banners/banner-secondary.jpg');
+    background-position: center 35%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .row {
+        margin: 0;
+        .content {
+            justify-content: center;
+            align-items: center;
+            .breadcumbs {
+                color: $white;
+                font-family: $ff-Jost-Medium;
+                font-size: 14px;
+                line-height: 1.1;
+            }
+            .title {
+                color: $white;
+                font-family: $ff-Jost-SemiBold;
+                font-size: 50px;
+                line-height: 1.2;
+            }
+        }
+    }
+}

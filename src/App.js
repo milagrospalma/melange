@@ -1,8 +1,11 @@
 import React, {useEffect} from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NavBar from './components/Navbar/NavBar';
 import Footer from './components/Footer/Footer';
-import ItemListContainer from './components/ItemListContainer';
-import ItemDetailContainer from './components/ItemDetailContainer';
+import Home from './components/Pages/Home';
+import Store from './components/Pages/Store';
+import ItemListContainer from './components/Products/ItemListContainer';
+import ItemDetailContainer from './components/Products/ItemDetailContainer';
 import M from 'materialize-css/dist/js/materialize.min.js';
 
 function App() {
@@ -16,10 +19,19 @@ function App() {
 
   return (
     <div className="App">
-      <NavBar />
-      <ItemListContainer gretting='Productos Nuevos' />
-      <ItemDetailContainer/>
-      <Footer/>
+      <BrowserRouter>
+
+        <NavBar/>
+        <Routes>
+            <Route exact path="/" element={<Home/>} />
+            <Route exact path="/store" element={<Store/>} />
+            <Route exact path="/" element={<Home/>} />
+        </Routes>
+        {/* <ItemListContainer gretting='Productos Nuevos' />
+        <ItemDetailContainer/> */}
+        <Footer/>
+      </BrowserRouter>
+
     </div>
   );
 }

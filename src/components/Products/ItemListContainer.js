@@ -30,10 +30,13 @@ function ItemListContainer(props) {
     API.then();
 
     return (
-        <div className="item-list-container">
-            <h4 className="text">{props.gretting}</h4>
-            <ItemList items={state}/>
-            <ItemCount stock="3" initial="1" />
+        <div className="col s12 l8">
+            {/* <h4 className="text">{props.gretting}</h4> */}
+            <div className="item-list-container">
+                <ItemList items={state}/>
+
+            </div>
+            {/* <ItemCount stock="3" initial="1" /> */}
         </div>
     )
 }
